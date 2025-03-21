@@ -7,16 +7,29 @@
 </head>
 <body>
     <script>
-       let maisNome = prompt("Você deseja adicionar mais algum nome? Digite 1 para sim ou 2 pra Não");
+      const aluno1 = "Aline";
+        const aluno2 = "Arthur";
+        const aluno3 = "Bárbara"
 
-        if (escolha == 1){
-         let resposta = prompt("Escreve o nome abaixo:");
-         alunos.push(resposta);
-        
+        document.write(aluno1 + "<br>");
+        document.write(aluno2 + "<br>");
+        document.write(aluno3 + "<br>");
+
+        //arrays
+        const alunos = [ "Aline","Arthur","Bárbara","Bruna Luise",  
+        "Bruna Torres","Bruna Velôso","Cauã"];
+        let adicionarMais = true 
+       
+        while (adicionarMais) {
+             let novoNome = prompt("digite o nome do aluno para adicionar a lista")
+            alunos.push(novoNome);
+        adicionarMais = confirm("Deseja adicionar mais um?")
         }
-    
-
-
+        
+        for (let indice = 0; indice < alunos.lenght; indice++) {
+                document.write(alunos[indice] + "<br>" );
+        }
+       
 
 
     </script>
